@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -35,11 +34,15 @@ func initServer() fiber.App {
 	return *app
 }
 
-func main() {
-	port := 8080
+func StartServer(port int) error {
 	app := initServer()
 	err := app.Listen(fmt.Sprintf(":%d", port))
 	if err != nil {
-		log.Fatalf("Error starting server")
+		return err
 	}
+	return nil
+}
+
+func main() {
+	StartServer(8080)
 }

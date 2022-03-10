@@ -1,0 +1,75 @@
+I, [2022-03-10T15:47:32.279744 #98117]  INFO -- : Registered expected interaction POST /ping
+D, [2022-03-10T15:47:32.279943 #98117] DEBUG -- : {
+  "description": "Pong Object",
+  "providerState": "Ping Object",
+  "request": {
+    "method": "POST",
+    "path": "/ping",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "times": 5
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "pongs": [
+          "pong",
+          "pong",
+          "pong",
+          "pong",
+          "pong"
+        ]
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2022-03-10T15:47:32.282177 #98117]  INFO -- : Received request POST /ping
+D, [2022-03-10T15:47:32.282258 #98117] DEBUG -- : {
+  "path": "/ping",
+  "query": "",
+  "method": "post",
+  "body": {
+    "times": 5
+  },
+  "headers": {
+    "Content-Length": "11",
+    "Content-Type": "application/json",
+    "Host": "localhost:60689",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-03-10T15:47:32.282589 #98117]  INFO -- : Found matching response for POST /ping
+D, [2022-03-10T15:47:32.282652 #98117] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": {
+      "pongs": [
+        "pong",
+        "pong",
+        "pong",
+        "pong",
+        "pong"
+      ]
+    }
+  }
+}
+I, [2022-03-10T15:47:32.284246 #98117]  INFO -- : Verifying - interactions matched
+I, [2022-03-10T15:47:32.285851 #98117]  INFO -- : Cleared interactions

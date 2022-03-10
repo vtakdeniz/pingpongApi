@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -12,6 +11,7 @@ import (
 )
 
 func Test_fetch(t *testing.T) {
+
 	type args struct {
 		pingObj Ping
 	}
@@ -48,7 +48,6 @@ func Test_fetch(t *testing.T) {
 				fmt.Fprintf(w, tt.want)
 			}))
 			defer svr.Close()
-			log.Printf("%v", tt.args.pingObj)
 			pong, err := fetch(svr.URL, tt.args.pingObj)
 			if err != nil {
 				t.Errorf("expected err to be nil got %v", err)

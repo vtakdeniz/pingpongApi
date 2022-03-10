@@ -1,0 +1,11 @@
+# Logfile created on 2022-03-10 16:12:31 +0300 by logger.rb/47272
+I, [2022-03-10T16:12:36.791710 #8369]  INFO -- : Running example 'Verifying a pact between foo and bar Given Ping Object Pong Object with POST /ping returns a response which has status code 200'
+I, [2022-03-10T16:12:36.791965 #8369]  INFO -- : Sending POST request to path: "/ping" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Ping Object"}]}, see debug logs for body
+D, [2022-03-10T16:12:36.792023 #8369] DEBUG -- : body :{"times":5}
+I, [2022-03-10T16:12:36.809466 #8369]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"46", "Content-Type"=>"application/json", "Date"=>"Thu, 10 Mar 2022 13:12:36 GMT"}, see debug logs for body
+D, [2022-03-10T16:12:36.809544 #8369] DEBUG -- : body: {"pongs":["pong","pong","pong","pong","pong"]}
+I, [2022-03-10T16:12:40.258441 #8369]  INFO -- : Running example 'Verifying a pact between foo and bar Given Ping Object Pong Object with POST /ping returns a response which has status code 200'
+I, [2022-03-10T16:12:40.258628 #8369]  INFO -- : Sending POST request to path: "/ping" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Ping Object"}]}, see debug logs for body
+D, [2022-03-10T16:12:40.258673 #8369] DEBUG -- : body :{"times":5}
+I, [2022-03-10T16:12:40.260296 #8369]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"46", "Content-Type"=>"application/json", "Date"=>"Thu, 10 Mar 2022 13:12:39 GMT"}, see debug logs for body
+D, [2022-03-10T16:12:40.260331 #8369] DEBUG -- : body: {"pongs":["pong","pong","pong","pong","pong"]}

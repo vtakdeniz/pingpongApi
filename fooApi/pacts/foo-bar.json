@@ -1,0 +1,54 @@
+{
+  "consumer": {
+    "name": "foo"
+  },
+  "provider": {
+    "name": "bar"
+  },
+  "interactions": [
+    {
+      "description": "Pong Object",
+      "providerState": "Ping Object",
+      "request": {
+        "method": "POST",
+        "path": "/ping",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "times": 5
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "pongs": [
+            "pong",
+            "pong",
+            "pong",
+            "pong",
+            "pong"
+          ]
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
